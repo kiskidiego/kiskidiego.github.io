@@ -644,6 +644,7 @@ figure.snip1321.hover:after {
 }
 
 .emailimage img {
+    -webkit-transform: translateX(50%);
     transform: translateX(50%);
     display: block;
     width: auto;
