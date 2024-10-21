@@ -148,6 +148,11 @@ html {
     margin-bottom: 0px;
 }
 
+.menu .author-content h5 {
+    color: #fff;
+    margin-bottom: 0px;
+}
+
 .menu .author-content span {
     font-size: 13px;
     font-style: italic;
@@ -312,7 +317,7 @@ html {
 
 .section-heading span {
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 32px;
     color: #fff;
     letter-spacing: 0.5px;
 }
@@ -374,6 +379,11 @@ button:hover {
 .right-image-post h4,
 .left-image-post h4 {
     margin-top: 30px;
+}
+
+.right-image-post h5,
+.left-image-post h5 {
+    margin-top: 10px;
 }
 
 .right-image-post p,
@@ -628,6 +638,17 @@ figure.snip1321.hover:after {
 
 
 /* Contact Me */
+
+.emailimage {
+    max-height: 300px;
+}
+
+.emailimage img {
+    transform: translateX(50%);
+    display: block;
+    width: auto;
+    height: auto;
+}
 
 section.contact-me {
     border-bottom: none;
