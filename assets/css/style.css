@@ -397,6 +397,7 @@ button:hover {
 }
 
 
+
 /* Services */
 
 .my-services .col-md-6 {
@@ -640,13 +641,13 @@ figure.snip1321.hover:after {
 /* Contact Me */
 
 .emailimage {
-    max-height: 300px;
+    display: block;
+    min-height: 300px;
+    height: auto;
+    width: auto;
 }
 
 .emailimage img {
-    -webkit-transform: translateX(50%);
-    transform: translateX(50%);
-    display: block;
     width: auto;
     height: auto;
 }
