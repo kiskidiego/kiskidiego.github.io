@@ -370,7 +370,8 @@ button:hover {
     margin-top: 30px;
     padding-top: 30px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.25);
+    border-top: 1px solid rgba(250, 250, 250, 0.25);;
+    
 }
 
 .right-image img {
@@ -430,8 +431,6 @@ button:hover {
 }
 
 .service-item .service-icon {
-    width: 70px;
-    height: 70px;
     display: inline-block;
     margin-bottom: 30px;
     background-size: cover;
@@ -439,38 +438,9 @@ button:hover {
     transition: all 0.5s;
 }
 
-.service-item .first-service-icon {
-    background-image: url(../images/first-white-icon.png);
+.service-item:hover .service-icon {
+    color: #054c77;
 }
-
-.service-item:hover .first-service-icon {
-    background-image: url(../images/first-main-icon.png);
-}
-
-.service-item .second-service-icon {
-    background-image: url(../images/second-white-icon.png);
-}
-
-.service-item:hover .second-service-icon {
-    background-image: url(../images/second-main-icon.png);
-}
-
-.service-item .third-service-icon {
-    background-image: url(../images/third-white-icon.png);
-}
-
-.service-item:hover .third-service-icon {
-    background-image: url(../images/third-main-icon.png);
-}
-
-.service-item .fourth-service-icon {
-    background-image: url(../images/fourth-white-icon.png);
-}
-
-.service-item:hover .fourth-service-icon {
-    background-image: url(../images/fourth-main-icon.png);
-}
-
 
 /* My Work */
 
