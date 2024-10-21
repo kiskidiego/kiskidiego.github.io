@@ -642,14 +642,14 @@ figure.snip1321.hover:after {
 
 .emailimage {
     display: block;
-    min-height: 300px;
-    height: auto;
     width: auto;
+    height: auto;
 }
 
 .emailimage img {
-    width: auto;
+    width: 100%;
     height: auto;
+    max-width: 400px;
 }
 
 section.contact-me {
