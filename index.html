@@ -192,7 +192,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>Marble Battle!</h4>
-                  <h5>JavaScript, Solo Project, No Engine</h5>
+                  <h5>No Engine, JavaScript, Solo Project, Multiplayer</h5>
                   <h6>9/2024</h6>
                   <p>
                     This is a prototype for a browser-based multiplayer game. It's a 2D battle royale where you play as a marble and try to knock other players into holes. 
@@ -218,7 +218,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>Tunnel Game</h4>
-                  <h5>Godot, Solo Project, Procedural Generation</h5>
+                  <h5>Godot, C#, Solo Project, Procedural Generation</h5>
                   <h6>6/2024</h6>
                   <p>
                     This is a proof of concept for a procedural cave system generation algorithm based on Marching Cubes. 
@@ -246,7 +246,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>CityScapee</h4>
-                  <h5>Unity, Solo Project, Optimization techniques</h5>
+                  <h5>Unity, C#, Solo Project, Optimization techniques</h5>
                   <h6>4/2024</h6>
                   <p>
                     Short parkour game made in Unity. The main focus of this project was to learn about optimization techniques, such as occlusion culling and level of detail.
@@ -275,7 +275,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>Prop Trip</h4>
-                  <h5>Unity, 15 person team, Game Jam</h5>
+                  <h5>Unity, C#, 15 person team, Game Jam</h5>
                   <h6>4/2024</h6>
                   <p>
                     A game made in 48 hours for UJI Game Jam 2024. It's a 3D hack and slash where you play as a man trying to defend himself from his own hallucinations.
@@ -301,7 +301,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>Teresa: From black to green</h4>
-                  <h5>Unity, 3 person team</h5>
+                  <h5>Unity, C#, 3 person team</h5>
                   <h6>12/2023</h6>
                   <p>
                     Game developed for the town hall of Teresa, a small town in the province of Castellón, Spain.
@@ -328,7 +328,7 @@
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>Growing Fear</h4>
-                  <h5>Unity, 13 person team, Game Jam</h5>
+                  <h5>Unity, C#, 13 person team, Game Jam</h5>
                   <h6>10/2023</h6>
                   <p>
                     Game Jam submission for UJI Spooky Game Jam 2023. The game is a clicker in which the player must conquer the world by usign demonic vegetables to sow chaos on the planet.
@@ -346,6 +346,34 @@
               <div class="col-md-6">
                 <div class="right-image">
                   <img src="assets/images/growing-fear-title.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>SkullKiller</h4>
+                  <h5>Phaser, JavaScript, 3 person team</h5>
+                  <h6>5/2023</h6>
+                  <p>
+                    Browser Game Made in phaser as a project for University, I can be played by pressing the "Play" button below. 
+                    I was in charge of all the programming in the game, excluding sound and music.
+                  </p>
+                  <div>
+                    <span class="white-button">
+                      <a href="SkullKiller/index.html" target="_blank" rel="noopener noreferrer">Play</a>
+                    </span>
+                    <span class="white-button">
+                      <a href="https://github.com/kiskidiego/SkullKiller" target="_blank" rel="noopener noreferrer">Source</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="assets/images/skullkiller-screencap.PNG" alt="" />
                 </div>
               </div>
             </div>
@@ -405,7 +433,7 @@
       var checkSection = function checkSection() {
         $(".section").each(function() {
           var $this = $(this),
-            topEdge = $this.offset().top - 200,
+            topEdge = $this.offset().top - 350,
             bottomEdge = topEdge + $this.height(),
             wScroll = $(window).scrollTop();
           if (topEdge < wScroll && bottomEdge > wScroll) {
