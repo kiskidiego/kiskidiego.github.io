@@ -366,7 +366,9 @@ button:hover {
 
 /* Left & Right Post */
 
+
 .right-image-post {
+    display: inline;
     margin-top: 30px;
     padding-top: 30px;
     padding-bottom: 10px;
