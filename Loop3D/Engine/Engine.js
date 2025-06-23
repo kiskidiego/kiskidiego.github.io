@@ -1,5 +1,5 @@
 import Renderer from "./Renderer.js";
-import Physics from "./Physics.js";AWWSF
+import Physics from "./Physics.js";
 import GameObject from "./GameObject.js";
 import Scene from "../Core/Scene.js";
 import Rigidbody from "./Rigidbody.js";
