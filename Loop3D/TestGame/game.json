@@ -254,7 +254,7 @@
               {
                 "type": "input",
                 "parameters": {
-                  "key": "KeyEnter",
+                  "key": "Enter",
                   "mode": "pressed"
                 },
                 "nodeListTrue": [
@@ -808,7 +808,7 @@
                   {
                     "type": "input",
                     "parameters": {
-                      "key": "KeyEnter",
+                      "key": "Enter",
                       "mode": "pressed"
                     },
                     "nodeListTrue": [
@@ -860,7 +860,7 @@
                   {
                     "type": "input",
                     "parameters": {
-                      "key": "KeyEnter",
+                      "key": "Enter",
                       "mode": "pressed"
                     },
                     "nodeListTrue": [
