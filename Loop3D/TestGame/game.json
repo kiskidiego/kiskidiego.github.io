@@ -1749,7 +1749,7 @@
         },
         {
           "name": "HealthBarFrame1",
-          "mesh": "./TestGame/Resources/FBX/HealthBarFrame.fbx",
+          "mesh": "./TestGame/Resources/FBX/HealthbarFrame.fbx",
           "screen": true,
           "positionX": -8.5,
           "positionY": 6,
@@ -1766,7 +1766,7 @@
         },
         {
           "name": "HealthBarFrame2",
-          "mesh": "./TestGame/Resources/FBX/HealthBarFrame.fbx",
+          "mesh": "./TestGame/Resources/FBX/HealthbarFrame.fbx",
           "screen": true,
           "positionX": 8.5,
           "positionY": 6,
