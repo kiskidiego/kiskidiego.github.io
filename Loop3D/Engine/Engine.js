@@ -15,7 +15,7 @@ export default class Engine {
     constructor(gameModel) {
         this.gameModel = gameModel;
         engine = this;
-        this.unlockAudioContext(Howler.ctx);
+        this.loadPhysics() 
     }
     unlockAudioContext(audioCtx) {
         const b = document.body;
