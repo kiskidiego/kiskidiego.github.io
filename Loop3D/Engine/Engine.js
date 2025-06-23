@@ -380,7 +380,7 @@ console.log("yeah");
             console.warn("No animation found for gameObject: " + gameObject.name);
             return;
         }
-
+        console.log(gameObject.actions[animation]);
         gameObject.actions[animation].setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce);
         gameObject.actions[animation].reset().fadeIn(transition).play();
     }
