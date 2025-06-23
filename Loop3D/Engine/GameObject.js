@@ -1,6 +1,6 @@
-import MeshRenderer from "./MeshRenderer";
-import Rigidbody from "./Rigidbody";
-import Rule from "./Rule";
+import MeshRenderer from "./MeshRenderer.js";
+import Rigidbody from "./Rigidbody.js";
+import Rule from "./Rule.js";
 import {Howl, Howler} from "howler";
 
 export default class GameObject {
