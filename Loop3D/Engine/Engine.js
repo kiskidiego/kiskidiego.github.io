@@ -6,7 +6,6 @@ import Rigidbody from "./Rigidbody.js";
 import Input from "./Input.js";
 import Actor from "../Core/Actor.js";
 import Timer from "./Timer.js";
-import { Howler } from "howler";
 import * as THREE from 'three';
 
 var engine = null;
