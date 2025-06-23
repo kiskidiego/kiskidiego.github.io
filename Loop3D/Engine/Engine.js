@@ -8,7 +8,7 @@ import Actor from "../Core/Actor.js";
 import Timer from "./Timer.js";
 import * as THREE from 'three';
 var engine = null;
-//
+
 export default class Engine {
     constructor(gameModel) {
 console.log("yeah");
