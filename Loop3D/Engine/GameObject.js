@@ -1,7 +1,7 @@
 import MeshRenderer from "./MeshRenderer.js";
 import Rigidbody from "./Rigidbody.js";
 import Rule from "./Rule.js";
-a
+
 export default class GameObject {
     constructor(actor, engine, spawned = false) {
         this.actor = actor;
