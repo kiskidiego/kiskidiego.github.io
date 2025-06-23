@@ -5,15 +5,23 @@
 </head>
 <body>
 <p>Test</p>
+<meta http-equiv='cache-control' content='no-cache'> 
+<meta http-equiv='expires' content='0'> 
+<meta http-equiv='pragma' content='no-cache'>
 	<canvas id="gameCanvas" width="800" height="600" position="fixed" top="0" left="0"></canvas>
-	<script type="importmap">
-	{
-		"imports": {
-			"three": "https://unpkg.com/three/build/three.module.js",
-			"three/": "https://unpkg.com/three@0.156.0/"
-		}
-	}</script>
-	<script src="Libraries/howler.min.js"></script>
-	<script type="module" src="main.js"></script>
+	<script src="Libraries/ammo.js"></script>
+	<script src="Libraries/math.js"></script>
+	<script type="module/text/javascript" src="Core/Scene.js"></script>
+	<script type="module/text/javascript" src="Core/Game.js"></script>
+	<script type="module/text/javascript" src="Core/Actor.js"></script>
+	<script src="Core/Utils.js"></script>
+	<script src="Enums/ColliderTypes.js"></script>
+	<script src="Enums/PerspectiveTypes.js"></script>
+	<script src="Enums/PhysicsModes.js"></script>
+	<script type="module/text/javascript" src="Engine/FileLoader.js"></script>
+	<script type="module/text/javascript" src="Engine/Renderer.js"></script>
+	<script type="module/text/javascript" src="Engine/Physics.js"></script>
+	<script type="module/text/javascript" src="Engine/Engine.js"></script>
+	<script type="module/text/javascript" src="main.js"></script>
 </body>
 </html>
