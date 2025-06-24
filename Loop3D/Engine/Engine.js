@@ -91,6 +91,7 @@ export default class Engine {
     }
     setGameObjects() {
         this.loadedObjects = 0;
+        this.deadObjects = 0;
         this.activeScene.actorList.forEach(actor => {
             this.loadGameObject(actor);
             this.loadedObjects++;
@@ -354,6 +355,11 @@ export default class Engine {
     }
     delete(gameObject) {
         gameObject.dead = true;
+        this.deadObjects++;
+        /*let timeout = setTimeout(() => {
+            this.removeGameObject(gameObject);
+            clearTimeout(timeout);
+        }, 1000); // Wait for 1 second before removing the gameObject*/
     }
     animate(gameObject, animation, loop = false, transition) {
         if(!gameObject.mixer) {
