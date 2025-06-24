@@ -6,7 +6,16 @@
     "camForwardX": 1,
     "camForwardY": -1,
     "camForwardZ": -1,
-    "perspectiveType": "orthographic",
+    "camTilt": 0,
+    "camFov": 30,
+    "viewPortWidth": 1200,
+    "viewPortHeight": 900,
+    "perspectiveType": "perspective",
+    "dirLightDirectionX": 0.5,
+    "dirLightDirectionY": -1,
+    "dirLightDirectionZ": -0.2,
+    "dirLightColor": "0xffffff",
+    "dirLightIntensity": 10,
     "sceneList": [
         {
             "name": "Scene_1",
