@@ -1,6 +1,11 @@
 {
     "name": "physics_demo",
-    "camPositionZ": 20,
+    "camPositionX": -65,
+    "camPositionY": 60,
+    "camPositionZ": 65,
+    "camForwardX": 1,
+    "camForwardY": -1,
+    "camForwardZ": -1,
     "perspectiveType": "orthographic",
     "sceneList": [
         {
