@@ -366,74 +366,23 @@ export default class Engine {
         }
     }
     animate(gameObject, animation, loop = false, transition) {
-        if(!gameObject.mixer) {
-            console.warn("No mixer found for gameObject: " + gameObject.name);
-            return;
-        }
-
-        let animName;
-        if(isNaN(animation)) {
-            animName = animation;
-            animation = gameObject.actions.findIndex(i => i._clip.name == animation);
-        }
-        if(animation == -1) {
-            console.warn("Animation not found: " + animName);
-            return;
-        }
-
-        for(let i = 0; i < gameObject.actions.length; i++) {
-            if(gameObject.actions[i] == gameObject.actions[animation]) {
-                continue;
-            }
-            gameObject.actions[i].fadeOut(transition);
-            setTimeout(() => {
-                gameObject.actions[i].stop();
-            }, transition * 1000);
-        }
-
-        if(!gameObject.actions[animation]) {
-            console.warn("No animation found for gameObject: " + gameObject.name);
-            return;
-        }
-        console.log(gameObject.actions[animation]);
-        gameObject.actions[animation].setLoop(loop ? THREE.LoopRepeat : THREE.LoopOnce);
-        gameObject.actions[animation].reset().fadeIn(transition).play();
+        gameObject.animationLoop = loop;
+        gameObject.transitionTime = transition;
+        gameObject.animation = animation;
     }
-    stopAnimation(gameObject, animation, transition) {
-        if(!gameObject.mixer) {
-            console.warn("No mixer found for gameObject: " + gameObject.name);
-            return;
-        }
-        if(isNaN(animation)) {
-            animation = gameObject.actions.findIndex(i => i._clip.name == animation);
-        }
-        if(animation == -1) {
-            console.warn("Animation not found: " + animation);
-            return;
-        }
-        if(!gameObject.actions[animation]) {
-            console.warn("No animation found for gameObject: " + gameObject.name);
-            return;
-        }
-        gameObject.actions[animation].fadeOut(transition);
-        setTimeout(() => {
-            gameObject.actions[animation].stop();
-        }, transition * 1000);
+    stopAnimation(gameObject, transition) {
+        gameObject.animationLoop = false;
+        gameObject.transitionTime = transition;
+        gameObject.animation = null;
     }
     playSound(gameObject, sound) {
-        if(gameObject.sounds[sound]) {
-            gameObject.sounds[sound].play();
-        }
+        gameObject.sound = sound;
     }
-    stopSound(gameObject, sound) {
-        if(gameObject.sounds[sound]) {
-            gameObject.sounds[sound].stop();
-        }
+    stopSound(gameObject) {
+        gameObject.sound = null;
     }
-    setVolume(gameObject, sound, volume) {
-        if(gameObject.sounds[sound]) {
-            gameObject.sounds[sound].volume(volume);
-        }
+    setVolume(gameObject, volume) {
+        gameObject.volume = volume;
     }
     setGlobalVolume(volume) {
         Howler.volume(volume);
