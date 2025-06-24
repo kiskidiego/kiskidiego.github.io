@@ -75,6 +75,8 @@ export default class Renderer{
             let vec = new THREE.Vector2();
             this.renderer.getSize(vec);
             this.camera = new THREE.PerspectiveCamera(camFov, vec.x / vec.y, 0.1, 100000000);
+            console.log("Perspective camera created with fov: " + camFov);
+            console.log(this.camera);
             this.hudCamera = new THREE.OrthographicCamera(-vec.x / 2 * 30 / 2000, vec.x / 2 * 30 / 2000, vec.y / 2 * 30 / 2000, -vec.y / 2 * 30 / 2000, 0.1, 100000000);
             this.isPerspectiveCamera = true;
         }
