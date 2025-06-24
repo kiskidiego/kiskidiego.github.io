@@ -32,7 +32,7 @@ export default class Game {
 			// Lighting
 			dirLightDirectionX: this.dirLightDirectionX || 0, dirLightDirectionY: this.dirLightDirectionY == undefined ? -1 : this.dirLightDirectionY, dirLightDirectionZ: this.dirLightDirectionZ || 0,
 			dirLightColor: this.dirLightColor == undefined ? 0xffffff : this.dirLightColor, // Default to white if not specified
-			dirLightIntensity: this.dirLightIntensity == undefined ? 1 : this.dirLightIntensity, // Default to 1 if not specified
+			dirLightIntensity: this.dirLightIntensity == undefined ? 10 : this.dirLightIntensity, // Default to 10 if not specified
 			shadows: this.shadows === undefined ? true : this.shadows, // Default to true if not specified
 
 			// SkyBox
