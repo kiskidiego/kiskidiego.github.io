@@ -30,9 +30,9 @@ export default class Game {
 			perspectiveType: this.perspectiveType || PerspectiveTypes.Perspective,
 
 			// Lighting
-			dirLightDirectionX: this.dirLightDirectionX || 0, dirLightDirectionY: this.dirLightDirectionY || 0, dirLightDirectionZ: this.dirLightDirectionZ || 0,
-			dirLightColor: this.dirLightColor || 0xffffff,
-			dirLightIntensity: this.dirLightIntensity || 1,
+			dirLightDirectionX: this.dirLightDirectionX || 0, dirLightDirectionY: this.dirLightDirectionY == undefined ? -1 : this.dirLightDirectionY, dirLightDirectionZ: this.dirLightDirectionZ || 0,
+			dirLightColor: this.dirLightColor == undefined ? 0xffffff : this.dirLightColor, // Default to white if not specified
+			dirLightIntensity: this.dirLightIntensity == undefined ? 1 : this.dirLightIntensity, // Default to 1 if not specified
 			shadows: this.shadows === undefined ? true : this.shadows, // Default to true if not specified
 
 			// SkyBox
@@ -41,7 +41,7 @@ export default class Game {
 			skyBottomColor: this.skyBottomColor == undefined ? 0x404040 : this.skyBottomColor,
 
 			// Physics
-			physicsOn: this.physicsOn || true,
+			physicsOn: this.physicsOn === undefined ? true : this.physicsOn, // Default to true if not specified
 			gravityX: this.gravityX || 0, gravityY: this.gravityY == undefined ? -9.81 : this.gravityY, gravityZ: this.gravityZ || 0,
 		}
 		return obj;

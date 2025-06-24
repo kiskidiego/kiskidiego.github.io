@@ -1,0 +1,60 @@
+{
+    "name": "physics_demo",
+    "camPositionZ": 10,
+    "sceneList": [
+        {
+            "name": "Scene_1",
+            "actorList":
+            [
+                {
+                    "name": "Box",
+                    "mesh": "./TestGame/Resources/FBX/TestCube.fbx",
+                    "customProperties": {
+                        "justStarted": true
+                    },
+                    "scripts": [
+                        [
+                            {
+                                "type": "check",
+                                "parameters": {
+                                    "property": "justStarted"
+                                },
+                                "nodeListTrue":[
+                                    {
+                                        "type": "edit",
+                                        "parameters": {
+                                            "property": "Me.customProperties.justStarted",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "type": "set_timer",
+                                        "parameters": {
+                                            "time": 10,
+                                            "repeat": false,
+                                            "start": true,
+                                            "name": "delete"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "type": "check_timer",
+                                "parameters": {
+                                    "name": "delete"
+                                },
+                                "nodeListTrue": [
+                                    {
+                                        "type": "delete"
+                                    }
+                                ]
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}
