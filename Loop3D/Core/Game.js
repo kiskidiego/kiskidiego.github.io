@@ -27,7 +27,7 @@ export default class Game {
 			camTilt: this.camTilt || 0,
 			camFov: this.camFov == undefined ? 45 : this.camFov,
 			viewPortWidth: this.viewPortWidth || 800, viewPortHeight: this.viewPortHeight || 600,
-			perspectiveType: this.perspectiveType || PerspectiveTypes.Perspective,
+			perspectiveType: this.perspectiveType == undefined ? "perspective" : this.perspectiveType, // Default to perspective if not specified
 
 			// Lighting
 			dirLightDirectionX: this.dirLightDirectionX || 0, dirLightDirectionY: this.dirLightDirectionY == undefined ? -1 : this.dirLightDirectionY, dirLightDirectionZ: this.dirLightDirectionZ || 0,
