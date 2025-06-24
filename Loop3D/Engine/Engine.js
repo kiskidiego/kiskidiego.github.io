@@ -58,6 +58,7 @@ export default class Engine {
             this.activeScene = this.sceneList[0];
     }
     initGameLoop() {
+        console.log("Initializing game loop...");
         if(this.activeScene.actorList.length == 0) {
             console.log("No actors in scene. Exiting game loop.");
             return;
@@ -66,6 +67,7 @@ export default class Engine {
             console.log("Loading game objects: " + this.loadedObjects + "/" + this.activeScene.actorList.length);
             return;
         }
+        console.log("Game loop initialized.");
         this.ffps = 100;
         this.deltaTime = 1 / this.ffps;
         this.currentTime = this.accumulator = this.frameTime = this.time = 0.0;
