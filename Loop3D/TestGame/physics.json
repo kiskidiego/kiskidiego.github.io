@@ -17,7 +17,7 @@
                             {
                                 "type": "check",
                                 "parameters": {
-                                    "property": "justStarted"
+                                    "property": "Me.customProperties.justStarted"
                                 },
                                 "nodeListTrue":[
                                     {
