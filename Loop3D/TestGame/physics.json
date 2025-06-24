@@ -8,9 +8,6 @@
     "camForwardZ": -1,
     "camTilt": 0,
     "camFov": 30,
-    "viewPortWidth": 1200,
-    "viewPortHeight": 900,
-    "perspectiveType": "perspective",
 
     "sceneList": [
         {
