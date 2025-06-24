@@ -12,6 +12,7 @@ export default class Game {
 		}
 		else {
 			Object.assign(this, game);
+			Object.assign(this, this.properties);
 			this.sceneList = this.sceneList.map((scene) => new Scene(scene));
 		}
 	}

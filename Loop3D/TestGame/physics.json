@@ -1,21 +1,10 @@
 {
     "name": "physics_demo",
-    "camPositionX": -65,
-    "camPositionY": 60,
-    "camPositionZ": 65,
-    "camForwardX": 1,
-    "camForwardY": -1,
-    "camForwardZ": -1,
-    "camTilt": 0,
-    "camFov": 30,
-    "viewPortWidth": 1200,
-    "viewPortHeight": 900,
-    "perspectiveType": "perspective",
-    "dirLightDirectionX": 0.5,
-    "dirLightDirectionY": -1,
+    "camPositionY": 20,
+    "camPositionZ": 30,
+    "camForwardY": -0.5,
+    "dirLightDirectionX": 0.1,
     "dirLightDirectionZ": -0.2,
-    "dirLightColor": "0xffffff",
-    "dirLightIntensity": 10,
     "sceneList": [
         {
             "name": "Scene_1",
@@ -25,11 +14,8 @@
                     "name": "Floor",
                     "tag": "terrain",
                     "collider": "box",
-                    "colliderSizeX": -1,
-                    "colliderSizeY": -1,
-                    "colliderSizeZ": -1,
-                    "scaleX": 0.5,
-                    "scaleZ": 0.5,
+                    "scaleX": 0.25,
+                    "scaleZ": 0.25,
                     "mesh": "./TestGame/Resources/FBX/Floor.fbx",
                     "materials": [
                         {
@@ -40,12 +26,144 @@
                         "opacity": 1
                         }
                     ],
-                    "physicsMode": "static",
-                    "friction": 1
+                    "physicsMode": "static"
+                },
+                {
+                    "name": "BoxSpawner",
+                    "physicsMode": "none",
+                    "customProperties": {
+                        "justStarted": true
+                    },
+                    "scripts":[
+                        [
+                            {
+                                "type": "check",
+                                "parameters": {
+                                    "property": "Me.customProperties.justStarted"
+                                },
+                                "nodeListTrue": [
+                                    {
+                                        "type": "edit",
+                                        "parameters": {
+                                            "property": "Me.customProperties.justStarted",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "type": "set_timer",
+                                        "parameters": {
+                                            "time": 0.1,
+                                            "repeat": true,
+                                            "start": true,
+                                            "name": "spawn"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "type": "check_timer",
+                                "parameters": {
+                                    "name": "spawn"
+                                },
+                                "nodeListTrue": [
+                                    {
+                                        "type": "compare",
+                                        "parameters": {
+                                            "value_1": "Random()",
+                                            "operation": "Greater",
+                                            "value_2": 0.5
+                                        },
+                                        "nodeListTrue": [
+                                            {
+                                                "type": "spawn",
+                                                "parameters": {
+                                                    "actor": "Box"
+                                                }
+                                            }
+                                        ],
+                                        "nodeListFalse": [
+                                            {
+                                                "type": "spawn",
+                                                "parameters": {
+                                                    "actor": "Sphere"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    ]
                 },
                 {
                     "name": "Box",
+                    "positionY": 20,
+                    "rotationX": 45,
+                    "rotationY": 45,
+                    "rotationZ": 45,
                     "mesh": "./TestGame/Resources/FBX/TestCube.fbx",
+                    "customProperties": {
+                        "justStarted": true
+                    },
+                    "scripts": [
+                        [
+                            {
+                                "type": "check",
+                                "parameters": {
+                                    "property": "Me.customProperties.justStarted"
+                                },
+                                "nodeListTrue":[
+                                    {
+                                        "type": "edit",
+                                        "parameters": {
+                                            "property": "Me.customProperties.justStarted",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "type": "set_timer",
+                                        "parameters": {
+                                            "time": 10,
+                                            "repeat": false,
+                                            "start": true,
+                                            "name": "delete"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        [
+                            {
+                                "type": "check_timer",
+                                "parameters": {
+                                    "name": "delete"
+                                },
+                                "nodeListTrue": [
+                                    {
+                                        "type": "delete"
+                                    }
+                                ]
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "name": "Sphere",
+                    "positionY": 20,
+                    "mesh": "./TestGame/Resources/FBX/TestSwirl.fbx",
+                    "collider": "sphere",
+                    "materials": [
+                        {
+                            "color": "0xFF0000",
+                            "metalness": 0,
+                            "roughness": 1,
+                            "transparent": false,
+                            "opacity": 1
+                        }
+                    ],
+                    "physicsMode": "dynamic",
                     "customProperties": {
                         "justStarted": true
                     },
