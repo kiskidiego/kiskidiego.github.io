@@ -26,7 +26,8 @@
                         "opacity": 1
                         }
                     ],
-                    "physicsMode": "static"
+                    "physicsMode": "static",
+                    "bounciness": 0.7
                 },
                 {
                     "name": "BoxSpawner",
@@ -104,6 +105,13 @@
                     "rotationY": 45,
                     "rotationZ": 45,
                     "mesh": "./TestGame/Resources/FBX/TestCube.fbx",
+                    "collider": "box",
+                    "mass": 1000,
+                    "drag": 0.1,
+                    "friction": 0.9,
+                    "rollingFriction": 0.9,
+                    "angularDrag": 0.5,
+                    "bounciness": 0.5,
                     "customProperties": {
                         "justStarted": true
                     },
@@ -154,6 +162,12 @@
                     "positionY": 20,
                     "mesh": "./TestGame/Resources/FBX/TestSwirl.fbx",
                     "collider": "sphere",
+                    "mass": 0.1,
+                    "bounciness": 1,
+                    "drag": 0.1,
+                    "angularDrag": 0.1,
+                    "rollingFriction": 0.1,
+                    "friction": 0.1,
                     "materials": [
                         {
                             "color": "0xFF0000",

@@ -356,10 +356,14 @@ export default class Engine {
     delete(gameObject) {
         gameObject.dead = true;
         this.deadObjects++;
-        /*let timeout = setTimeout(() => {
-            this.removeGameObject(gameObject);
-            clearTimeout(timeout);
-        }, 1000); // Wait for 1 second before removing the gameObject*/
+        if(this.deadObjects >= 100) {
+            this.deadObjects = 0;
+            for(let i = this.activeGameObjects.length - 1; this.deadObjects > 50; i--) {
+                if(this.activeGameObjects[i].dead) {
+                    this.removeGameObject(this.activeGameObjects[i]);
+                }
+            }
+        }
     }
     animate(gameObject, animation, loop = false, transition) {
         if(!gameObject.mixer) {
