@@ -68,7 +68,7 @@ export default class Engine {
             return;
         }
         console.log("Game loop initialized.");
-        this.ffps = 100;
+        this.ffps = 60;
         this.deltaTime = 1 / this.ffps;
         this.currentTime = this.accumulator = this.frameTime = this.time = 0.0;
         this.loopRunning = true;
@@ -108,21 +108,21 @@ export default class Engine {
         this.render.removeGameObject(gameObject);
         this.activeGameObjects.splice(this.activeGameObjects.findIndex(i => i.id == gameObject.id), 1);
     }
-    gameLoop(newTime) {
+    gameLoop(newTime) {     // Outer loop
         this.animationRequest = window.requestAnimationFrame(this.gameLoop.bind(this));
         this.frameTime = (newTime - this.currentTime) / 1000;
         if (this.frameTime > 0.1) this.frameTime = 0.1;
         this.accumulator += this.frameTime;
-        while (this.accumulator >= this.deltaTime && this.loopRunning) {
-            this.physics.update(this.deltaTime);
-            this.activeGameObjects.forEach((gameObject) => {
+        while (this.accumulator >= this.deltaTime && this.loopRunning) {    // Inner loop
+            this.physics.update(this.deltaTime);            // Update physics simulation
+            this.activeGameObjects.forEach((gameObject) => {    // Evaluate game object rules
                 gameObject.fixedUpdate();
             });
-            Input.restartInput();
+            Input.restartInput();               // Reset input states for the next frame
             this.time += this.deltaTime;
             this.accumulator -= this.deltaTime;
         }
-        this.render.update(this.frameTime);
+        this.render.update(this.frameTime);     // Render the game onto the screen
         this.currentTime = newTime;
     }
     stopGameLoop() {
