@@ -72,7 +72,6 @@ export default class Engine {
         this.deltaTime = 1 / this.ffps;
         this.currentTime = this.accumulator = this.frameTime = this.time = 0.0;
         this.loopRunning = true;
-        console.log(this);
         this.animationRequest = window.requestAnimationFrame(this.gameLoop.bind(this));
     }
     initPhysics(Ammo) {
