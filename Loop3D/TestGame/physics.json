@@ -1,6 +1,7 @@
 {
     "name": "physics_demo",
     "camPositionZ": 10,
+    "perspectiveType": "orthographic",
     "sceneList": [
         {
             "name": "Scene_1",
