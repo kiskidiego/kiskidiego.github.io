@@ -155,6 +155,11 @@ html {
     margin-top: 60px;
 }
 
+.menu .social-network ul {
+    list-style: none;
+    padding: 0;
+}
+
 .menu .social-network ul li {
     margin: 0 3px;
 }
