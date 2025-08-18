@@ -96,7 +96,11 @@ html {
 .main-nav li:last-child a {
     border-bottom: 2px solid #fff;
 }
-
+.main-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+} 
 .main-nav li {
     display: block;
 }
